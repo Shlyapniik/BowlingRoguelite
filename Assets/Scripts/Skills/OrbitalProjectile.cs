@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class OrbitalProjectile : MonoBehaviour
 {
-    [SerializeField] private float damage = 3f;
+    [SerializeField] private float damage = 10f;
 
     private void OnTriggerEnter(Collider other)
     {

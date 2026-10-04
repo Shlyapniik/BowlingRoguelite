@@ -915,6 +915,7 @@ GameObject:
   - component: {fileID: 1551305404}
   - component: {fileID: 1551305403}
   - component: {fileID: 1551305402}
+  - component: {fileID: 1551305408}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1058,6 +1059,21 @@ Transform:
   - {fileID: 2094065622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1551305408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551305401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a39c29dd0d0914b8c46835363c837e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerProgression
+  startingLevel: 1
+  startingExperienceToNextLevel: 10
+  experienceMultiplier: 1.2
 --- !u!1 &1935900605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,8 +1219,8 @@ MonoBehaviour:
   player: {fileID: 1551305407}
   startingEnemyCount: 10
   additionalEnemiesPerWave: 5
-  spawnInterval: 2
-  waveDelay: 5
+  spawnInterval: 0.5
+  waveDelay: 3
   spawnDistance: 12
 --- !u!4 &1941975673
 Transform:

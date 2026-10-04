@@ -157,3 +157,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   moveSpeed: 2
   maxHealth: 10
+  experienceOrbPrefab: {fileID: 2120572469668415464, guid: fd1cb9b1d75e99e4c8b7fa6bf64298f6, type: 3}
+  experienceValue: 1

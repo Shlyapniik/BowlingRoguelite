@@ -4,6 +4,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float maxHealth = 10f;
+    [SerializeField] private ExperienceOrb experienceOrbPrefab;
+    [SerializeField] private float experienceValue = 1f;
 
     private Transform target;
     private float currentHealth;
@@ -28,7 +30,19 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        SpawnExperience();
+
         Destroy(gameObject);
+    }
+
+    private void SpawnExperience()
+    {
+        ExperienceOrb experienceOrb = Instantiate(
+            experienceOrbPrefab,
+            transform.position,
+            Quaternion.identity);
+
+        experienceOrb.SetValue(experienceValue);
     }
 
     private void Update()
